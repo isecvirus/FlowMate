@@ -241,7 +241,7 @@ class Prompt:
                 try:
                     while True:
                         # sys.stdout.write("\033[K")
-                        print(f"\r\033[K{self.message}\n\n {format_options()}", end='')
+                        print(f"\r\033[K{self.message} {format_options()}", end='')
                         if msvcrt.kbhit():
                             key = msvcrt.getch()
                             if key == b'\xe0':
